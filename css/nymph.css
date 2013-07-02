@@ -1,0 +1,28 @@
+html {
+	background-color: #F5F4F1;
+	background-attachment: fixed;
+}
+
+body {
+	text-align: center;
+	background-attachment: fixed;
+	font-family: Minion, Times New Roman, serif;
+
+}
+
+/* FRONT */
+#front_section, #second_section, #chapters_section, #ensemble_section {
+	position: fixed;
+	height: 100%;
+	opacity: 0;
+}
+
+#second_section {
+}
+
+#chapters_section {
+}
+
+#ensemble_section {
+
+}
