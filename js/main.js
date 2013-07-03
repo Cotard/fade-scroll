@@ -28,8 +28,19 @@ $(document).ready(function() {
 
 		if (top > sectionHeight)
 		{
-			TweenLite.to(sections[0], 0.1, {opacity: 0});
+			for (var i = 0; i < currentSection; i++)
+			{
+				TweenLite.to(sections[i], 0.1, {opacity: 0});
+			}
+				
+		} else {
+			
+			for (var i = currentSection; i < sections.length; i++)
+				{
+					TweenLite.to(sections[i], 0.1, {opacity: 0});
+				}
 		}
+		//костыль для устранения глюков при «дерзком» скролле
 
 		if (topOfSection > (sectionHeight / 2)) { // прозрачность с середины секции
 
@@ -42,7 +53,7 @@ $(document).ready(function() {
 			} else {
 
 				TweenLite.to(sections[currentSection + 1], 1, {opacity: 1 - opacityPercent});
-				TweenLite.to(sections[i], 1, {opacity: 0});
+				TweenLite.to(sections[currentSection], 1, {opacity: 0});
 
 			}
 
