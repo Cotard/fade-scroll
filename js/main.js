@@ -9,14 +9,14 @@ $(document).ready(function() {
 
 	$(window).load(function() {
 
-		$('body').height(sections.length*sectionHeight);
+		$('body').height((sections.length + 0.5) * sectionHeight);
 
 		if ($(window).scrollTop() == 0)	{
 			TweenLite.to(sections[0], 1, {opacity: 1});
 		}
 		//после перезагрузки страницы выполняется window.scroll, и все норм. 
 		//а если не выполняется, то прозрачность первой секции = 1 
-		
+
 	});
 
 	$(window).scroll(function(e) {
@@ -42,8 +42,17 @@ $(document).ready(function() {
 
 		if (topOfSection > (sectionHeight / 2)) { // прозрачность с середины секции
 
+			if (currentSection == (sections.length - 1)) {
+
+				TweenLite.to(sections[currentSection], 1, {opacity: 1});
+				//если текущая секция последняя - ей не надо исчезать
+				
+			} else {
+
 				TweenLite.to(sections[currentSection], 1, {opacity: 0});
 				TweenLite.to(sections[currentSection+1], 1, {opacity: 0});
+
+			}
 
 		} else {
 			TweenLite.to(sections[currentSection], 1, {opacity: 1});
