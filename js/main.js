@@ -1,23 +1,18 @@
 $(document).ready(function() {
 
 	var sectionHeight = $(window).height(),
-		$frontSection = $("#front_section"),
-		$secondSection = $("#second_section"),
-		$chaptersSection = $("#chapters_section"),
-		$ensembleSection = $("#ensemble_section"),
-		sections = [$frontSection, $secondSection, $chaptersSection, $ensembleSection];
+		$firstSection = $("#firstSection"),
+		$secondSection = $("#secondSection"),
+		$thirdSection = $("#thirdSection"),
+		$fourthSection = $("#fourthSection"),
+		sections = [$firstSection, $secondSection, $thirdSection, $fourthSection];
 
-	$(window).load(function() {
+	$('body').height((sections.length + 0.5) * sectionHeight);
 
-		$('body').height((sections.length + 0.5) * sectionHeight);
-
-		if ($(window).scrollTop() == 0)	{
-			TweenLite.to(sections[0], 1, {opacity: 1});
-		}
-		//после перезагрузки страницы выполняется window.scroll, и все норм. 
+	if ($(window).scrollTop() == 0)	{
+		TweenLite.to(sections[0], 1, {opacity: 1});
+	} 	//после перезагрузки страницы выполняется window.scroll, и все норм. 
 		//а если не выполняется, то прозрачность первой секции = 1 
-
-	});
 
 	$(window).scroll(function(e) {
 
@@ -46,7 +41,7 @@ $(document).ready(function() {
 
 				TweenLite.to(sections[currentSection], 1, {opacity: 1});
 				//если текущая секция последняя - ей не надо исчезать
-				
+
 			} else {
 
 				TweenLite.to(sections[currentSection], 1, {opacity: 0});

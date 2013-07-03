@@ -11,18 +11,8 @@ body {
 }
 
 /* FRONT */
-#front_section, #second_section, #chapters_section, #ensemble_section {
+#firstSection, #secondSection, #thirdSection, #fourthSection {
 	position: fixed;
 	height: 100%;
 	opacity: 0;
-}
-
-#second_section {
-}
-
-#chapters_section {
-}
-
-#ensemble_section {
-
 }
