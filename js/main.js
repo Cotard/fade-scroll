@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 			for (var i = 0; i < currentSection; i++) {
 
-				TweenLite.to(sections[i], 0.01, {opacity: 0});
+				TweenLite.to(sections[i], 0.0001, {opacity: 0});
 
 			}
 				
