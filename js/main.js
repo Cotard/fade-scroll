@@ -6,7 +6,8 @@ $(document).ready(function() {
 		$thirdSection = $("#thirdSection"),
 		$fourthSection = $("#fourthSection"),
 		sections = [$firstSection, $secondSection, $thirdSection, $fourthSection];
-
+		
+	$('html, body').animate({scrollTop:0}, 1); //возвращает скролл к началу страницы
 	$('body').height((sections.length + 0.5) * sectionHeight);
 
 	if ($(window).scrollTop() == 0)	{
@@ -59,9 +60,13 @@ $(document).ready(function() {
 		} else {
 
 			TweenLite.to(sections[currentSection], 0.4, {opacity: 1});
-			
+
 		}
 
+		return false;
+
 	});
+ 
+return false;
 
 });
