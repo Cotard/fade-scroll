@@ -6,9 +6,9 @@ $(document).ready(function() {
 		$thirdSection = $("#thirdSection"),
 		$fourthSection = $("#fourthSection"),
 		sections = [$firstSection, $secondSection, $thirdSection, $fourthSection];
-		
-	$('html, body').animate({scrollTop:0}, 1); //возвращает скролл к началу страницы
+
 	$('body').height((sections.length + 0.5) * sectionHeight);
+	$('html, body').animate({scrollTop:0}, 1); //возвращает скролл к началу страницы
 
 	if ($(window).scrollTop() == 0)	{
 
@@ -23,6 +23,19 @@ $(document).ready(function() {
 		var top = $(window).scrollTop(),
 			currentSection = ~~ (top / sectionHeight) , // ~~ - отбрасывание дробной части
 			topOfSection = top - (currentSection * sectionHeight);
+
+		if (top == 0) {
+
+			for (var i = 0; i < sections.length; i++) {
+
+				TweenLite.to(sections[i], 0.0001, {opacity: 0});
+
+			}
+
+			TweenLite.to(sections[0], 0.4, {opacity: 1});
+			return false;
+
+		}
 
 		if (top > sectionHeight) {
 
@@ -63,10 +76,6 @@ $(document).ready(function() {
 
 		}
 
-		return false;
-
 	});
- 
-return false;
 
 });
