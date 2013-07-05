@@ -11,8 +11,9 @@ $(document).ready(function() {
 	$('html, body').animate({scrollTop:0}, 1); //возвращает скролл к началу страницы
 
 	if ($(window).scrollTop() == 0)	{
+		sections[0].animate({opacity: 1}, 400);
 
-		TweenLite.to(sections[0], 0.4, {opacity: 1});
+		//TweenLite.to(sections[0], 0.4, {opacity: 1}, 1);
 
 	} 	
 	//после перезагрузки страницы выполняется window.scroll, и все норм. 
