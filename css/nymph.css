@@ -14,5 +14,26 @@ body {
 #firstSection, #secondSection, #thirdSection, #fourthSection {
 	position: fixed;
 	height: 100%;
+	width: 70%;
+	left: 15%;
 	opacity: 0;
+}
+
+.content {
+	position: absolute;
+	width: 100%;
+}
+
+.first-content {
+	top: 50%;
+	margin-top: -147px;
+}
+
+.second-content {
+	font: 16px/20px  'Idealist Sans-light', sans-serif;
+}
+
+h1 {
+	font: 60px/60px 'Idealist Sans-light', sans-serif;
+	color: #ff3b12;
 }
