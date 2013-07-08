@@ -10,6 +10,10 @@ body {
 
 }
 
+a {
+	color: #a7a7a7;
+}
+
 /* FRONT */
 #firstSection, #secondSection, #thirdSection, #fourthSection {
 	position: fixed;
@@ -30,10 +34,15 @@ body {
 }
 
 .second-content {
-	font: 16px/20px  'Idealist Sans-light', sans-serif;
+	font: 16px/30px  'Idealist Sans-light', sans-serif;
 }
 
 h1 {
 	font: 60px/60px 'Idealist Sans-light', sans-serif;
 	color: #ff3b12;
+}
+
+#secondSection {
+	top: 50%;
+	margin-top: -300px;
 }

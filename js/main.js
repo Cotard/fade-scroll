@@ -11,7 +11,7 @@ $(document).ready(function() {
 	$('html, body').animate({scrollTop:0}, 1); //возвращает скролл к началу страницы
 
 	if ($(window).scrollTop() == 0)	{
-		
+
 		sections[0].animate({opacity: 1}, 400);
 
 	} 	
@@ -60,11 +60,14 @@ $(document).ready(function() {
 
 			if (currentSection == (sections.length - 1)) {
 
+				sections[currentSection].css("zIndex", 10);
 				TweenLite.to(sections[currentSection], 0.4, {opacity: 1});
 				//если текущая секция последняя - ей не надо исчезать
 
 			} else {
-
+				
+				sections[currentSection].css("zIndex", 0);
+				sections[currentSection+1].css("zIndex", 0);
 				TweenLite.to(sections[currentSection], 0.4, {opacity: 0});
 				TweenLite.to(sections[currentSection+1], 0.4, {opacity: 0});
 
@@ -72,6 +75,7 @@ $(document).ready(function() {
 
 		} else {
 
+			sections[currentSection].css("zIndex", 10);
 			TweenLite.to(sections[currentSection], 0.4, {opacity: 1});
 
 		}
