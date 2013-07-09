@@ -20,6 +20,13 @@
 }
 
 @font-face {
+	font-family: 'EB Garamond';
+	font-style: normal;
+	font-weight: 400;
+	src: local('EB Garamond'), local('EBGaramond'), url(../fonts/Garamond.woff) format('woff');
+}
+
+@font-face {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
