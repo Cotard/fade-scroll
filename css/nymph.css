@@ -14,6 +14,10 @@ a {
 	color: #a7a7a7;
 }
 
+ul {
+	list-style: none;
+}
+
 /* FRONT */
 #firstSection, #secondSection, #thirdSection, #fourthSection {
 	position: fixed;
@@ -39,7 +43,7 @@ header {
 }
 
 h1 {
-	font: 60px/60px 'Idealist Sans-light', sans-serif;
+	font: 32pt/40pt 'Days', sans-serif;
 	color: #ff3b12;
 }
 
@@ -118,16 +122,65 @@ h1 {
 	font-weight: 400; 
 }
 
+.contacts {	
+	margin: 0 auto;
+	background: rgb(63,147,147);
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.contacts a {
+	color: #000;
+	text-decoration: none;
+}
+
 .say-hello {
-	color: rgb(63,147,147);
-	letter-spacing: 2px;
+	color: #fff;
 	margin: 0 15px;
-	padding: 65px 0 0 0;
-	font-size: 18pt;
+	padding: 90px 0 0 0;
+	font-size: 20pt;
 	font-family: 'EB Garamond', serif;
 }
 
-.phone {
-	width: 32px;
-	height: 32px;
+
+.email:before {
+	position: relative;
+	top: 4px;
+	content: url('../img/email.png');
+}
+
+.phone:before {
+	position: relative;
+	top: 3px;
+	content: url('../img/phone.png');
+}
+
+nav {
+	z-index: 5000;
+	position: fixed;
+	top: 50%;
+	right: 16px;
+	margin-top: -55px;
+}
+
+nav li {
+	position: relative;
+	width: 11px;
+	height: 11px;
+	margin: 11px 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+nav a {
+	display: block;
+	width: 11px;
+	height: 11px;
+	background: rgb(63,147,147);
+}
+
+nav a:hover {
+	background: #ff3b12;
 }

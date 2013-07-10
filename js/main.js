@@ -7,6 +7,36 @@ $(document).ready(function() {
 		$fourthSection = $("#fourthSection"),
 		sections = [$firstSection, $secondSection, $thirdSection, $fourthSection];
 
+	/* Next/prev and primary nav btn click handlers */
+	$('.first-section').click(function(){
+    	$('html, body').animate({
+    		scrollTop: 0
+    	}, { duration: 1750, easing: 'easeOutSine' });
+    	return false;
+	});
+	
+    $('.second-section').click(function(){
+    	$('html, body').animate({
+    		scrollTop: sectionHeight
+    	}, { duration: 1750, easing: 'easeOutSine' });
+    	return false;
+    });
+    
+    $('.third-section').click(function(){
+    	$('html, body').animate({
+    		scrollTop: sectionHeight * 2
+    	}, { duration: 1750, easing: 'easeOutSine' });
+    	return false;
+    });
+
+	$('.fourth-section').click(function(){
+    	$('html, body').animate({
+    		scrollTop: sectionHeight * 3
+    	}, { duration: 1750, easing: 'easeOutSine' });
+    	return false;
+    });
+
+
 	$('body').height((sections.length + 0.5) * sectionHeight);
 	$('html, body').animate({scrollTop:0}, 1); //возвращает скролл к началу страницы
 
@@ -41,6 +71,7 @@ $(document).ready(function() {
 
 			for (var i = 0; i < currentSection; i++) {
 
+				sections[i].css("zIndex", 0);
 				TweenLite.to(sections[i], 0.0001, {opacity: 0});
 
 			}
@@ -49,6 +80,7 @@ $(document).ready(function() {
 
 			for (var i = currentSection + 1; i < sections.length; i++) {
 
+				sections[i].css("zIndex", 0);
 				TweenLite.to(sections[i], 0.4, {opacity: 0});
 
 			}

@@ -11,12 +11,33 @@
         
     </head>
     <body>
-        
+
+    	<nav>
+    		<ul>
+				<li>
+					<h1 style="display: none;">Welcome</h1>
+					<a class="first-section" href="#firstSection"></a>
+				</li>
+				<li>
+					<h1 style="display: none;">Welcome</h1>
+					<a class="second-section" href="#secondSection"></a>
+				</li>
+				<li>
+					<h1 style="display: none;">Welcome</h1>
+					<a class="third-section" href="#thirdSection"></a>
+				</li>
+				<li>
+					<h1 style="display: none;">Welcome</h1>
+					<a class="fourth-section" href="#fourthSection"></a>
+				</li>
+			</ul>	
+    	</nav>
+
         <div id="firstSection">
 
 			<div class = "first-content">
 				
-				<img src="img/main.png">
+				<img src="img/orange_point.png">
 
 			</div>	
 	        
@@ -82,14 +103,22 @@
 				<p>Мне интересна должность верстальщика и/или back-end разработчика, потому что только верстать 
 					— это не так интересно. К сожалению, я еще не имею опыта работы с RoR, но очень хочу научиться. 
 				</p>
-				<p class = "say-hello">Свяжитесь со мной!</p>
 
-				
-				<p>
-					<img class = "phone" src="http://www.clker.com/cliparts/0/f/c/2/1195445181899094722molumen_phone_icon.svg.thumb.png" /> 
-					+7-905-487-51-49
-				</p>
-				<p>masha.patani@gmail.com</p>
+
+				<div class="contacts">
+					<p class = "say-hello">
+						Как со мной связаться:
+					</p>
+
+					
+					<p class = "phone">
+						+7-905-487-51-49
+					</p>
+
+					<p class = "email">
+						<a href="mailto:masha.patani@gmail.com">masha.patani@gmail.com</a>
+					</p>
+				</div>
 
 			</div>
 			
@@ -99,6 +128,7 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/CSSPlugin.min.js"></script>
         <script src="js/TweenLite.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
         <script src="js/main.js"></script>
 </body>
 </html>
