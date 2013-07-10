@@ -1,13 +1,5 @@
 $(document).ready(function() {
 
-	var sectionHeight = $(window).height(),
-		$firstSection = $("#firstSection"),
-		$secondSection = $("#secondSection"),
-		$thirdSection = $("#thirdSection"),
-		$fourthSection = $("#fourthSection"),
-		sections = [$firstSection, $secondSection, $thirdSection, $fourthSection];
-
-	/* Next/prev and primary nav btn click handlers */
 	$('.first-section').click(function(){
     	$('html, body').animate({
     		scrollTop: 0
@@ -35,6 +27,14 @@ $(document).ready(function() {
     	}, { duration: 1750, easing: 'easeOutSine' });
     	return false;
     });
+    
+
+	var sectionHeight = $(window).height(),
+		$firstSection = $("#firstSection"),
+		$secondSection = $("#secondSection"),
+		$thirdSection = $("#thirdSection"),
+		$fourthSection = $("#fourthSection"),
+		sections = [$firstSection, $secondSection, $thirdSection, $fourthSection];
 
 
 	$('body').height((sections.length + 0.5) * sectionHeight);
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	if ($(window).scrollTop() == 0)	{
 
-		sections[0].animate({opacity: 1}, 400);
+		$("nav, #firstSection").animate({opacity: 1}, 500);
 
 	} 	
 	//после перезагрузки страницы выполняется window.scroll, и все норм. 

@@ -163,6 +163,7 @@ nav {
 	top: 50%;
 	right: 16px;
 	margin-top: -55px;
+	opacity: 0;
 }
 
 nav li {
